@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getCurrentSession, loginUser } from "@/actions/auth";
 import SignIn from "@/components/auth/SignIn";
 import { redirect } from "next/navigation";
