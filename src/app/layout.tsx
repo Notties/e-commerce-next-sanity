@@ -1,9 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import { getCurrentSession } from "@/actions/auth";
-import HeaderCategorySelector from "@/components/layout/HeaderCategorySelector";
+import { SanityLive } from "@/sanity/lib/live";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +15,11 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { user } = await getCurrentSession();
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <Header user={user} categorySelector={<HeaderCategorySelector />} />
         {children}
+        <SanityLive />
       </body>
     </html>
   );
