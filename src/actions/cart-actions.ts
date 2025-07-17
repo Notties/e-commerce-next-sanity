@@ -2,6 +2,8 @@
 
 import { getCurrentSession } from "@/actions/auth";
 import prisma from "@/lib/prisma";
+import { Product } from "@/root/sanity.types";
+import { urlFor } from "@/sanity/lib/image";
 import { revalidatePath } from "next/cache";
 
 export const createCart = async () => {

@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { getAllCategories } from "@/sanity/lib/client";
 import React from "react";
 
 const HeaderCategorySelector = async () => {
+  const categories = await getAllCategories();
 
   return (
     <div className="relative inline-block">
@@ -26,7 +28,7 @@ const HeaderCategorySelector = async () => {
       <div className="absolute top-full left-0 pt-2 opacity-0 invisible peer-hover:opacity-100 peer-hover:visible hover:opacity-100 hover:visible transition-all duration">
         <div className="w-64 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
           <div className="py-2">
-            {/* {categories.map((category) => (
+            {categories.map((category) => (
               <Link
                 key={category._id}
                 href={`/category/${category.slug?.current}`}
@@ -35,7 +37,7 @@ const HeaderCategorySelector = async () => {
               >
                 {category.title}
               </Link>
-            ))} */}
+            ))}
           </div>
         </div>
       </div>

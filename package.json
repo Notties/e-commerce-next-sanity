@@ -15,8 +15,11 @@
     "@oslojs/crypto": "^1.0.1",
     "@oslojs/encoding": "^1.1.0",
     "@prisma/client": "^6.11.1",
+    "@radix-ui/react-dialog": "^1.1.14",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.99.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.525.0",
     "next": "15.3.5",
     "next-sanity": "^9.12.3",
@@ -24,6 +27,7 @@
     "react-dom": "^19.0.0",
     "sanity": "^3.99.0",
     "styled-components": "^6.1.19",
+    "tailwind-merge": "^3.3.1",
     "zod": "^3.25.74",
     "zustand": "^5.0.6"
   },
@@ -37,6 +41,7 @@
     "eslint-config-next": "15.3.5",
     "prisma": "^6.11.1",
     "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.5",
     "typescript": "^5"
   }
 }
