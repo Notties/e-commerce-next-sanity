@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import { getCurrentSession } from "@/actions/auth";
 import HeaderCategorySelector from "@/components/layout/HeaderCategorySelector";
+import Cart from "@/components/cart/Cart";
 
 export default async function MainLayout({
   children,
@@ -12,6 +13,7 @@ export default async function MainLayout({
     <main>
       <Header user={user} categorySelector={<HeaderCategorySelector />} />
       {children}
+      <Cart />
     </main>
   );
 }
